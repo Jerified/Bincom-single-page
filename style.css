@@ -13,6 +13,7 @@
   list-style: none;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
+  background-color: black;
 }
 ::selection {
   color: black;
@@ -21,17 +22,17 @@
 header {
   width: 100%;
   height: 160vh;
-  background-color: black;
   display: flex;
+  padding: 0 40px;
 }
 .header-left-side {
-  padding: 0 0 0 90px;
+  
   color: white;
 }
 .header-left-side h1 {
   color: #bea060;
   line-height: 1.2em;
-  font-size: 78px;
+  font-size: 68px;
   padding-top: 20px;
   margin-bottom: 20px;
   font-weight: 400 !important;
@@ -66,7 +67,31 @@ button {
   text-transform: uppercase;
   cursor: pointer;
 }
-button:hover {
+
+a {
+    padding: 20px 10px;
+    border: 2px solid #bea060;
+    background: transparent;
+    width: 100%;
+    color: white;
+    margin-right: 15px;
+    margin-bottom: px;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .links {
+    display: grid;
+    gap: 2rem;
+    /* width: 100%; */
+    /* flex-wrap: wrap; */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+button:hover , a:hover {
   background-color: #bea060;
   transition: 0.7s;
 }
@@ -81,7 +106,29 @@ button:hover {
   font-weight: 300;
 }
 .header-right-side img {
-  width: 670px;
-  height: 884px;
+  width: 100%;
+  height: 300px;
   /* margin-top: 15%; */
+}
+@media (min-width: 450px) {
+    header {
+        padding: 0 2rem;
+    }
+    header-right-side img {
+        height: 400px;
+      }
+}
+
+@media (min-width: 785px) {
+    header {
+        padding: 0 6rem;
+    }
+    header-right-side img {
+        height: 100%;
+      }
+}
+@media (min-width: 1024px) {
+    header {
+        padding: 0 15rem;
+    }
 }
